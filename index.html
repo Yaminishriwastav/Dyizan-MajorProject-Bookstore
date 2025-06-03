@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Bookstore</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>"For the Love of Books"</h1>
+    <p>ENJOY EVERY Genres BOOKS AT ONE PLACE</p>
+  </header>
+
+ <nav>
+  <select id="genreSelect">
+    <option value="">All Genres</option>
+    <option value="fiction">Fiction</option>
+    <option value="horror">Horror</option>
+    <option value="history">Historical</option>
+    <option value="romance">Romance</option>
+    <option value="mystery">Mystery</option>
+    <option value="fantasy">Fantasy</option>
+    <option value="science">Science</option>
+  </select>
+  <input type="text" id="searchBox" placeholder="Search for books..." />
+  <button id="searchBtn">🔍 Search</button>
+  <button id="suggestionTab">Suggest a Book</button>
+</nav>
+
+
+  <!-- Book Display Area -->
+  <main id="bookList" class="book-list">
+    <!-- Books will be dynamically inserted here -->
+  </main>
+
+  <!-- Suggestion Form Modal -->
+  <div id="suggestionModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close-btn">&times;</span>
+      <h2>📬 Recommend a Book</h2>
+      <form>
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="text" id="book" placeholder="Book Name" required />
+        <textarea id="message" placeholder="Why do you recommend it?" required></textarea>
+        <button type="submit">Submit Suggestion</button>
+      </form>
+      <div id="suggestionList">
+        <!-- User suggestions will be shown here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional Loader -->
+  <div id="loader" class="loader hidden">Loading more books...</div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
